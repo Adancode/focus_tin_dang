@@ -4,12 +4,18 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
   // Load index page
+  // app.get("/", function (req, res) {
+  //   res.render("index", {
+  //     msg: "Welcome!",
+  //     title: "Home",
+  //     customcss: `<link rel="stylesheet" href="/styles/timer.css"></link>`,
+  //     customjs: `<script type="text/javascript" src="/js/timer.js"></script>\n<script type="text/javascript" src="/js/index.js"></script>`
+  //   });
+  // });
+
   app.get("/", function (req, res) {
     res.render("index", {
-      msg: "Welcome!",
-      title: "Home",
-      customcss: `<link rel="stylesheet" href="/styles/timer.css"></link>`,
-      customjs: `<script type="text/javascript" src="/js/timer.js"></script>\n<script type="text/javascript" src="/js/index.js"></script>`
+      msg: "Welcome!"
     });
   });
 
